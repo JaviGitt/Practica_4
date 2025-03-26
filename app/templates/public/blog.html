@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        /* Estilos para el menú de navegación */
+        header {
+            background-color: #333; /* Color de fondo */
+            padding: 10px 0;
+            position: fixed; /* Fijar en la parte superior */
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Asegurar que esté encima de otros elementos */
+        }
+
+        nav {
+            display: flex;
+            justify-content: center; /* Centrar los elementos horizontalmente */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Alinear los elementos en línea */
+        }
+
+        nav ul li {
+            margin: 0 15px; /* Espaciado entre elementos */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #555; /* Cambio de color al pasar el cursor */
+            border-radius: 5px;
+        }
+
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding-top: 60px; /* Para evitar que el contenido se esconda detrás del header fijo */
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        span {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .oscuro {
+            background-color: black;
+            color: white;
+        }
+        button {
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: gray;
+            color: white;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre.html">Sobre mí</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <button id="modo">Modo Oscuro</button>
+    </header>
+    
+
+    
+    <h1>Blog</h1>
+    <article>
+        <h2>Mi primera experiencia con la programación</h2>
+        <p>Desde que comencé a programar, he encontrado un mundo lleno de posibilidades. Mi primer lenguaje fue <strong>Java</strong>, y desde entonces no he dejado de aprender.</p>
+        <p>Uno de mis proyectos favoritos hasta ahora ha sido desarrollar un <em>juego en Haskell</em>, lo que me permitió mejorar mis habilidades lógicas.</p>
+    </article>
+    
+    <article>
+        <h2>Desafíos del desarrollo web</h2>
+        <p>El desarrollo web puede parecer sencillo al inicio, pero presenta desafíos como la compatibilidad entre navegadores y la optimización del rendimiento.</p>
+        <p>Recientemente, implementé un <strong>modo oscuro</strong> en mi blog utilizando JavaScript, lo que mejoró la experiencia del usuario.</p>
+    </article>
+    
+    <script>
+        document.getElementById('modo').addEventListener('click', function() {
+            document.body.classList.toggle('oscuro');
+            this.textContent = document.body.classList.contains('oscuro') ? 'Modo Claro' : 'Modo Oscuro';
+        });
+    </script>
+</body>
+</html>
